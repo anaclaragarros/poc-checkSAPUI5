@@ -1,0 +1,21 @@
+<mvc:View
+  controllerName="POC-CHECKSAP.controller.Detail"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  displayBlock="true">
+
+    <Page title="Detalhes do Invoice" showNavButton="true" navButtonPress="onNavBack">
+    <VBox class="sapUiSmallMargin">
+    <ObjectHeader
+          title="{/title}"
+          number="Invoice #{/id}" />
+          <ObjectAttribute
+          title="User ID"
+          text="{/userId}" />
+          <ObjectStatus
+          title="Completed"
+          state="{= ${/completed} ? 'Success' : 'Error' }"
+          text="{= ${/completed} ? 'Yes' : 'No' }" />
+    </VBox>
+  </Page>
+</mvc:View>

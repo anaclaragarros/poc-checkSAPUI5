@@ -1,0 +1,58 @@
+<mvc:View
+  controllerName="POC-CHECKSAP.controller.Main"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true">
+  <Page showHeader="false">
+    <content>
+      <Bar>
+        <contentMiddle>
+          <SearchField
+            valueLiveUpdate="true"
+            search="onSearch"
+            width="100%"
+            placeholder="pesquisar" 
+            showSearchButton="true"
+            showCancelButton="true" />
+        </contentMiddle>
+      </Bar>
+      
+      <HBox justifyContent="Start" class="sapUiSmallMargin">
+        <Image
+          src="./images/brgaap-logo.png"
+          height="3rem"
+          alt="brgaap logo" />
+      </HBox>
+      
+      <VBox class="sapUiContentPadding">
+        <Table items="{tasks>/tasks}" width="100%">
+          <columns>
+            <Column width="60%">
+              <header><Text text="Nome" /></header>
+            </Column>
+            <Column hAlign="Center" width="20%">
+              <header><Text text="Completado" /></header>
+            </Column>
+            <Column hAlign="Center" width="20%">
+              <header><Text text="Detalhes" /></header>
+            </Column>
+          </columns>
+          <items>
+            <ColumnListItem>
+              <cells>
+                <Text text="{tasks>title}" />
+                <CheckBox selected="{tasks>completed}" />
+                <Button
+                  icon="sap-icon://document"
+                  type="Transparent"
+                  press="onShowDetails"
+                  class="sapUiTinyMarginBegin sapUiTinyMarginEnd" />
+              </cells>
+            </ColumnListItem>
+          </items>
+        </Table>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

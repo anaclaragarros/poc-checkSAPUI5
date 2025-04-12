@@ -1,0 +1,69 @@
+/* Estilo para a barra de pesquisa */
+.searchField {
+  border: 1px solid #ccc;
+  border-radius: 0;
+  background-color: #fff;
+  height: 70px;  /* Ajustando a altura da barra de pesquisa */
+  padding: 10px; /* Adicionando um pouco de padding para deixar o conteúdo mais espaçado */
+}
+
+.searchField .sapMSFB {
+  color: #666;
+}
+
+/* Distância entre a barra de pesquisa e os outros elementos */
+.sapUiContentPadding {
+  padding-top: 200px; 
+}
+
+.brgaapLogo {
+  margin: 40px 0 40px 0;
+  height: 60px;
+}
+
+.brgaapLogo img {
+  height: 100%;
+}
+
+.detailsButton {
+  border: 1px solid #0a7b8c !important;
+  border-radius: 0 !important;
+  width: 100% !important;
+  height: 36px !important;
+  background-color: white !important;
+}
+
+.detailsButton .sapUiIcon {
+  color: #0a7b8c !important;
+}
+
+.sapMListTblCell {
+  vertical-align: middle;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.sapMListTbl {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.sapMListTbl th {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e5e5e5;
+  height: 44px;
+}
+
+.sapMListTbl .sapMText {
+  font-size: 14px;
+}
+
+.sapMCb {
+  display: flex;
+  justify-content: center;
+}
+
+.sapMCbBg {
+  border: 1px solid #ccc;
+  background-color: white;
+}
