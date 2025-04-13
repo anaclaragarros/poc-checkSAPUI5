@@ -4,18 +4,40 @@
   xmlns="sap.m"
   displayBlock="true">
 
-    <Page title="Detalhes do Invoice" showNavButton="true" navButtonPress="onNavBack">
-    <VBox class="sapUiSmallMargin">
-    <ObjectHeader
-          title="{/title}"
-          number="Invoice #{/id}" />
-          <ObjectAttribute
-          title="User ID"
-          text="{/userId}" />
-          <ObjectStatus
-          title="Completed"
-          state="{= ${/completed} ? 'Success' : 'Error' }"
-          text="{= ${/completed} ? 'Yes' : 'No' }" />
+  <Page title="Detalhes do Invoice" showNavButton="true" navButtonPress="onNavBack">
+    <VBox class="sapUiMediumMargin">
+
+      <Table inset="false" showNoData="false">
+        <columns>
+          <Column width="30%">
+            <Text text="Título" />
+          </Column>
+          <Column width="20%">
+            <Text text="Invoice ID" />
+          </Column>
+          <Column width="20%">
+            <Text text="User ID" />
+          </Column>
+          <Column width="20%">
+            <Text text="Completed" />
+          </Column>
+        </columns>
+
+        <items>
+          <ColumnListItem>
+            <cells>
+              <Text text="{/title}" />
+              <Text text="{/id}" />
+              <Text text="{/userId}" />
+              <ObjectStatus
+                state="{= ${/completed} ? 'Success' : 'Error' }"
+                text="{= ${/completed} ? 'Yes' : 'No' }" />
+            </cells>
+          </ColumnListItem>
+        </items>
+
+      </Table>
+
     </VBox>
   </Page>
 </mvc:View>
