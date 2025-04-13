@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# VS Code settings
+.vscode/
+
+# Diretórios de build (se você estiver usando algum bundler)
+dist/
+build/
+
+# Arquivos temporários do sistema
+*.swp
+.DS_Store
+Thumbs.db
+
+# Outros arquivos específicos de projeto, como dependências ou configurações locais
+.env
+.npmrc
